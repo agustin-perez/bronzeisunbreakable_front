@@ -1,0 +1,82 @@
+@font-face{
+  font-family: 'OpenSans';
+  src: local('OpenSans'), url(./Assets/Fonts/OpenSans-Regular.ttf) format('TrueType');
+}
+
+body {
+  display: block;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App, .wrapper, .Stats, .About {
+  animation: ease-in; 
+  opacity: 0.5;
+  transition: opacidad 0.5s forwards;
+  -webkit-animation: opacidad 0.5s forwards;
+}
+
+@keyframes opacidad {
+  0%   {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+
+/* Navegadores viejos */
+@-webkit-keyframes opacidad {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+li, .link {
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  list-style: none;
+  color: gainsboro;
+}
+
+.wrapper {
+  padding-top: 100px;
+  background-size: 150%;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 150vh;
+}
+
+.main h1 {
+  top: 50px;
+  position: relative;
+  text-align: center;
+  padding: 100px;
+  color: white;
+  font-size: 100px;
+}
+
+.main h2 {
+  text-align: center;
+  padding: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1000px){
+  .main h1 {
+    font-size: 48px;
+  }
+
+  .main h2 {
+    font-size: 20px;
+  }
+
+  .contenedorBoton-content {
+    box-shadow: none;
+  }
+}
+
+.show {
+  display: block;
+}
