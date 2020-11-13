@@ -1,18 +1,107 @@
 .navBar {	
-    display: flex;
-    box-shadow: 2px 5px 5px rgba(0,0,0,0.5);
-    justify-content: center; 
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    max-height: 100px;
-    background-color: rgba(30, 30, 30, 1);
-    overflow: auto;
-    z-index: 1;
-    overflow: hidden;
+  display: flex;
+  box-shadow: 2px 5px 5px rgba(0,0,0,0.2);
+  align-items: left;
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba(30, 30, 30, 1);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.nav-navBar{
+  width: 100%;
+  height: 60px;
+  display: flex;
 }
 
 .responsiveHamburger:hover{
   cursor:pointer;
+}
+
+ul{
+  list-style: none;
+  display: block;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding-left: 10px;
+}
+
+li {
+  display: inline-block;
+}
+
+li, .link {
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  list-style: none;
+  color: gainsboro;
+  transition: all 0.3s ease 0s;
+  display:inline-block;
+  position:relative;
+  margin: 5px;
+  padding: 3px 3px 7px;
+}
+
+li .link::after {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:2px;
+  transform:scaleX(0);
+  bottom:0;
+  left:0;
+  background-color: dimgray;
+  transform-origin:bottom right;
+  transition:transform 0.7s ease-out;
+}
+
+li .link:hover::after {
+  transform:scaleX(1);
+  transform-origin: bottom left;
+}
+
+li .link:hover{
+  color: darkgray;
+}
+
+.mainLogo{
+  padding-top: 1px;
+  height: 80px;
+}
+
+@media (max-width: 1000px) {
+  ul{
+    flex-flow: column nowrap;
+    background-color: rgba(33, 39, 73, 0.99);
+    position: fixed;
+    top: 0;
+    left: -150vh;
+    margin: auto;
+    height: 100%;
+    width: 250px;
+    padding-top: 3.5rem;
+    transition: transform 0.35s ease-in-out;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  li {
+    padding: 10px 10px;
+  }
+
+  li .link::after {
+    background-color: #d6c4ff;
+  }
+
+  li .link:hover {
+    color: #996dff;
+  }
+  
+  .mainLogo{
+    display: none;
+  }
 }

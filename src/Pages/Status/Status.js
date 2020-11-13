@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-//import logo from './Media/homeLogo.png';
-//import './Home.css';
+import { generator } from 'uigradients';
 
 class Status extends Component{
     state = {

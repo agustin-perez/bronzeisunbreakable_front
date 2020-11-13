@@ -4,16 +4,12 @@ import Responsive from './Responsive';
 
 const Nav = styled.nav`
   width: 100%;
-  height: 100px;
+  height: 60px;
   display: flex;
   z-index: 0;
   
   .logo {
     padding: 15px 0;
-  }
-
-  @media (max-width: 1000px){
-    height: 75px;
   }
 `;
 

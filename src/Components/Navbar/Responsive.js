@@ -7,8 +7,8 @@ const ResponsiveStyle = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 22px;
-  left: 22px;
+  top: 13px;
+  left: 15px;
   z-index: 20;
   display: none;
   color: gainsboro;
@@ -19,7 +19,7 @@ const ResponsiveStyle = styled.div`
   }
   
   div {
-    width: 30px;
+    width: 33px;
     height: 0.25rem;
     background-color: ${({ open }) => open ? 'gainsboro' : 'gainsboro'};
     border-radius: 10px;
@@ -39,16 +39,16 @@ const ResponsiveStyle = styled.div`
 `;
 
 const Responsive = ( props ) => {
-    const [open, setOpen] = useState(false)
+    let [open, setOpen] = useState(false)
     return (
-        <>
+        <div>
         <ResponsiveStyle className="responsiveHamburger" open={open} onClick={() => setOpen(!open)}>
             <div />
             <div />
             <div />
         </ResponsiveStyle>
         <LeftNav open={open} props/>
-        </>
+        </div>
     );
 }
 
