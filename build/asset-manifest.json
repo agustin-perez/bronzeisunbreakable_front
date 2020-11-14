@@ -1,23 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b612194.chunk.css",
-    "main.js": "/static/js/main.839a9138.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.fdddb01c.js",
-    "static/js/2.80588982.chunk.js": "/static/js/2.80588982.chunk.js",
+    "main.css": "/static/css/main.698903b2.chunk.css",
+    "main.js": "/static/js/main.e5ad989b.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.baa8e92e.js",
+    "static/js/2.ee6c6ce2.chunk.js": "/static/js/2.ee6c6ce2.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.bacd9245985d8bd0ce736029204fdb0b.js": "/precache-manifest.bacd9245985d8bd0ce736029204fdb0b.js",
+    "precache-manifest.cafce8e09bf8dc7771d3b89978fda039.js": "/precache-manifest.cafce8e09bf8dc7771d3b89978fda039.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.80588982.chunk.js.LICENSE.txt": "/static/js/2.80588982.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/OpenSans-Regular.3ed9575d.ttf",
-    "static/media/Home.css": "/static/media/back.9ad93c0e.png",
-    "static/media/Contact.css": "/static/media/chartsBackground.a6899d5b.jpg",
-    "static/media/MediCare.css": "/static/media/medicareBackground.def4b9a6.png",
-    "static/media/laptop.jpg": "/static/media/laptop.851678ec.jpg"
+    "static/js/2.ee6c6ce2.chunk.js.LICENSE.txt": "/static/js/2.ee6c6ce2.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/OpenSans-Regular.3ed9575d.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.fdddb01c.js",
-    "static/js/2.80588982.chunk.js",
-    "static/css/main.6b612194.chunk.css",
-    "static/js/main.839a9138.chunk.js"
+    "static/js/runtime-main.baa8e92e.js",
+    "static/js/2.ee6c6ce2.chunk.js",
+    "static/css/main.698903b2.chunk.css",
+    "static/js/main.e5ad989b.chunk.js"
   ]
 }

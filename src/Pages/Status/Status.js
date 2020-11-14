@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { generator } from 'uigradients';
+import StatusCard from './StatusCards/StatusCards';
+import './Status.css';
 
 class Status extends Component{
     state = {
         serverstatus:[
-            {"ip":"","port":"","debug":{"ping":false,"query":false,"srv":false,"querymismatch":false,"ipinsrv":false,"cnameinsrv":false,"animatedmotd":false,"cachetime":0,"apiversion":2},"hostname":"","online":false, "motd":{"raw":[""],"clean":[""],"html":[""]}}
+            {"ip":"","port":"","debug":{"ping":false,"query":false,"srv":false,"querymismatch":false,"ipinsrv":false,"cnameinsrv":false,"animatedmotd":false,"cachetime":0,"apiversion":2},"hostname":"","online":false, "motd":{"raw":[""],"clean":[""],"html":[""]}, "players":{online:0, max:255}}
         ],
         title: "Status",
         isLoading: true
@@ -20,22 +21,23 @@ class Status extends Component{
     render(){
 
         document.title=this.state.title;
-        let showstatus="offline";
-        if(!this.state.isLoading && this.state.serverstatus.online){
-            showstatus="online";
+
+        if(this.state.isLoading){
+            return(
+                <div className="Status">
+                    <h1>Cargando datos de API...</h1>
+                </div>
+            )
         }
-
-
         
         return(
-            <div className="homeWrapper">
-                <div className="main">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <p>Estado del server: {showstatus}</p>
-                    <p>Tirame un ataque: {this.state.serverstatus.ip}</p>
+            <div className="Status">
+                <div className="StatusContainer">
+                    <h1>Estado del server</h1>
+                    <StatusCard title={this.state.serverstatus.motd.clean} text={this.state.serverstatus.online ? ("Online") : ("Problemas de conexión actualmente")} serverity={this.state.serverstatus.online ? ("normal") : ("critical")}/>
+                    <StatusCard title={"Jugadores"} text={this.state.serverstatus.players.online+" / "+this.state.serverstatus.players.max}/>
+                    <p>Versión: {this.state.serverstatus.version+" / Server software powered by: "+this.state.serverstatus.software}</p>
+                    <p>Special thanks to mcsrvstat.us</p>
                 </div>
             </div>
         )

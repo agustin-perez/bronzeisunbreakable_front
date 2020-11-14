@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-//import logo from './Media/homeLogo.png';
-//import './Home.css';
+import './Home.css';
 
 class Home extends Component{
     state = {
@@ -11,7 +10,7 @@ class Home extends Component{
         return(
             <div className="homeWrapper">
                 <div className="main">
-
+                    <p>Página en construcción</p>
                 </div>
             </div>
         )
