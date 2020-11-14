@@ -34,10 +34,11 @@ class Status extends Component{
             <div className="Status">
                 <div className="StatusContainer">
                     <h1>Estado del server</h1>
-                    <StatusCard title={this.state.serverstatus.motd.clean} text={this.state.serverstatus.online ? ("Online") : ("Problemas de conexión actualmente")} serverity={this.state.serverstatus.online ? ("normal") : ("critical")}/>
-                    <StatusCard title={"Jugadores"} text={this.state.serverstatus.players.online+" / "+this.state.serverstatus.players.max}/>
-                    <p>Versión: {this.state.serverstatus.version+" / Server software powered by: "+this.state.serverstatus.software}</p>
-                    <p>Special thanks to mcsrvstat.us</p>
+                    {console.log(this.state.serverstatus)}
+                    <StatusCard title={this.state.serverstatus.online ? (this.state.serverstatus.motd.clean) : ("Server")} text={this.state.serverstatus.online ? ("Online") : ("Conection issues")} serverity={this.state.serverstatus.online ? ("normal") : ("critical")}/>
+                    <StatusCard title={"Players"} text={(this.state.serverstatus.online ? (this.state.serverstatus.players.online) : ("0"))+" / "+(this.state.serverstatus.online ? (this.state.serverstatus.players.max) : ("?"))}/>
+                    <p>Version: {(this.state.serverstatus.online ? (this.state.serverstatus.version) : ("?"))+" / Server software powered by: "+(this.state.serverstatus.online ? (this.state.serverstatus.software) : ("Paper"))}</p>
+                    <p>Status API provided by mcsrvstat.us</p>
                 </div>
             </div>
         )

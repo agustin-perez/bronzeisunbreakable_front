@@ -1,4 +1,5 @@
 import React from 'react';
+import WarningIcon from '../Media/alertCard.svg';
 import './StatusCards.css';
 
 const StatusCards = ( props ) => {
@@ -25,7 +26,7 @@ const StatusCards = ( props ) => {
             return (
                 <div className="StatusCard">
                     <div className="StatusCritical">
-                        <i className="fas fa-exclamation-triangle"></i>
+                        <img className="criticalIcon" src={WarningIcon} alt="CriticalIcon"/>
                         <p className="StatusCTitle">{props.title}</p>
                         <p className="StatusCText">{props.text}</p>
                     </div>
