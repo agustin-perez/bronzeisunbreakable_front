@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/static/media/OpenSans-Regular.3ed9575d.ttf"
   },
   {
-    "revision": "143ce5810e39950a83807fe18538f77f",
+    "revision": "45969fdbe53fb7ceded5fa4d02489629",
     "url": "/index.html"
   }
 ];
