@@ -10,7 +10,8 @@ class Home extends Component{
         return(
             <div className="homeWrapper">
                 <div className="main">
-                    <p>Página en construcción</p>
+                    <p>Página en construcción!<br></br> 
+                        Server de Minecraft</p>
                 </div>
             </div>
         )

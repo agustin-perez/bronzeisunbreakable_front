@@ -21,7 +21,7 @@ const ResponsiveStyle = styled.div`
   div {
     width: 33px;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? 'gainsboro' : 'gainsboro'};
+    background-color: ${({ open }) => open ? 'rgb(206, 180, 166)' : 'rgb(206, 180, 166)'};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
