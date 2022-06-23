@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StatusCard from './StatusCards/StatusCards';
+import Discord from './Components/Discord/Discord';
 import './Status.css';
 
 class Status extends Component{
@@ -40,6 +41,7 @@ class Status extends Component{
                     <p>Version: {(this.state.serverstatus.online ? (this.state.serverstatus.version) : ("?"))+" / Server software powered by: "+(this.state.serverstatus.online ? (this.state.serverstatus.software) : ("Paper"))}</p>
                     <p>Status API provided by mcsrvstat.us</p>
                 </div>
+                <Discord source={"https://discord.com/widget?id=721194078167105546&theme=dark"}/>
             </div>
         )
     }
