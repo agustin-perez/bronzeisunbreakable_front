@@ -16,7 +16,7 @@
     width: inherit;
     min-width: inherit;
     border-radius: inherit;
-    background:rgb(9, 133, 0);
+    background:rgb(81, 228, 71);
     /*background: linear-gradient(145deg, rgba(108,255,94,1) 0%, rgba(0,195,167,1) 100%);*/
     box-shadow: inherit;
 }
@@ -36,7 +36,7 @@
     width: inherit;
     min-width: inherit;
     border-radius: inherit;
-    background: rgb(146, 33, 33);
+    background: rgb(238, 65, 65);
     /*background: linear-gradient(145deg, rgba(214,39,39,1) 0%, rgba(158,5,218,1) 100%);*/
     box-shadow: inherit;
 }
@@ -58,7 +58,7 @@
     height: inherit;
     width: inherit;
     border-radius: inherit;
-    background: rgb(161, 141, 130);
+    background: rgb(223, 199, 187);
     /*background: linear-gradient(145deg, rgba(213,211,211,1) 0%, rgba(117,61,135,1) 100%);*/
     box-shadow: inherit;
 }

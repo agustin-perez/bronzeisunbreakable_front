@@ -11,7 +11,7 @@ const ResponsiveStyle = styled.div`
   left: 15px;
   z-index: 20;
   display: none;
-  color: gainsboro;
+  color: white;
   @media (max-width: 1000px) {
     display: flex;
     justify-content: space-around;
@@ -21,7 +21,7 @@ const ResponsiveStyle = styled.div`
   div {
     width: 33px;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? 'rgb(206, 180, 166)' : 'rgb(206, 180, 166)'};
+    background-color: ${({ open }) => open ? 'black' : 'white'};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;

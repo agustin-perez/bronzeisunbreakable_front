@@ -1,18 +1,12 @@
-.homeWrapper{
-    color: rgb(161, 141, 130);
+.homeWrapper {
+    color: white;
     align-items: center;
     justify-content: center;
     text-align: center; 
     display: block;   
     margin: auto;
     padding-top: 80px;
-    background:rgb(51, 27, 4);
-    background-image: 
-    linear-gradient(-90deg, rgb(63, 26, 1) 25%, transparent 0%), 
-    linear-gradient(0deg, rgb(63, 26, 1) 25%, transparent 0%), 
-    linear-gradient(0deg, transparent 75%, rgb(63, 26, 1) 0%), 
-    linear-gradient(-90deg, transparent 75%, rgb(63, 26, 1) 0%);
-    background-size: 5px 5px;
+    background:rgb(95, 95, 95);
     height: 100vh;
     font-size: 48px;
 }
