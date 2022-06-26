@@ -58,7 +58,7 @@
     height: inherit;
     width: inherit;
     border-radius: inherit;
-    background: rgb(223, 199, 187);
+    background: white;
     /*background: linear-gradient(145deg, rgba(213,211,211,1) 0%, rgba(117,61,135,1) 100%);*/
     box-shadow: inherit;
 }

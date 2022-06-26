@@ -6,8 +6,6 @@
     display: block;   
     margin: auto;
     padding-top: 80px;
-    background:rgb(95, 95, 95);
-    height: 100vh;
 }
 
 .StatusContainer{
@@ -16,5 +14,8 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+}
+
+body{
+    background:rgb(95, 95, 95);
 }

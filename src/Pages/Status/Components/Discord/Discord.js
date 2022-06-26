@@ -7,7 +7,7 @@ const Disc = styled.div`
     position: fixed;
     background-color: hsl(235,calc(var(--saturation-factor, 1)*85.6%),64.7%);
     color: white;
-    border-radius: 7px;
+    border-radius: 15px;
     font-size: 18px;
     right: 0px;
     bottom: 0px;
@@ -15,10 +15,12 @@ const Disc = styled.div`
     height: 70%;
     transition: transform 0.35s ease-in-out;
     cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.253);
      
     p{
         margin-left: 20px;
     }
+
     .info-discord{
         display: inline-flex;
         text-align: left;
@@ -38,25 +40,31 @@ const Disc = styled.div`
     .iframe-discord{
         border-style: none;
         position: absolute;
-        top: 52px;
+        top: 55px;
         left: 0px;
         width: 100%;
-        height: 90%;
+        height: -webkit-calc(100% - 55px);
+        height: -moz-calc(100% - 55px);
+        height: calc(100% - 55px);
     }
+
     @media screen and (min-width: 1000px){
-        transform: ${({ status }) => status ? 'translateY(0px)' : 'translateY(88%)'};
+        transform: ${({ status }) => status ? 'translateY(0px)' : 'translateY(calc(100% - 62px))'};
     }
+
     @media screen and (max-width: 1000px){
         position: relative;
+        top: 50px;
         right: unset;
         bottom: unset;
         width: 80%;
-        height: 400px;
+        height: 100vh;
         margin: 0 auto;
         
         .panelButton{
             display: none;
         }
+
         .info-discord{
             position: relative;
             left: unset;
@@ -64,15 +72,6 @@ const Disc = styled.div`
             text-align: center;
             font-size: 16px;
             right: 10px;
-        }
-    }
-    @media screen and (max-width: 700px){
-        height: 500px;
-        width: 100%;
-        margin: 0 auto;
-        border-radius: unset;
-        .iframe-discord{
-            height: 448px;
         }
     }
 `;

@@ -14,7 +14,7 @@ class Status extends Component{
     
 
     async componentDidMount(){
-        let response = await fetch('https://api.mcsrvstat.us/2/bronzeisunbreakable.xyz');
+        let response = await fetch('https://api.mcsrvstat.us/2/bronzeisunbreakable.me');
         let jsonResponse = await response.json();
         this.setState({ serverstatus: jsonResponse, isLoading: false });
     }
@@ -35,13 +35,12 @@ class Status extends Component{
             <div className="Status">
                 <div className="StatusContainer">
                     <h1>Estado del server</h1>
-                    {console.log(this.state.serverstatus)}
                     <StatusCard title={this.state.serverstatus.online ? (this.state.serverstatus.motd.clean) : ("Server")} text={this.state.serverstatus.online ? ("Online") : ("Conection issues")} serverity={this.state.serverstatus.online ? ("normal") : ("critical")}/>
                     {this.state.serverstatus.online ? <StatusCard title={"Players"} text={(this.state.serverstatus.online ? (this.state.serverstatus.players.online) : ("0"))+" / "+(this.state.serverstatus.online ? (this.state.serverstatus.players.max) : ("?"))}/> : null}
-                    <p>Version: {(this.state.serverstatus.online ? (this.state.serverstatus.version) : ("?"))+" / Server software powered by: "+(this.state.serverstatus.online ? (this.state.serverstatus.software) : ("Paper"))}</p>
+                    <p>Version: {(this.state.serverstatus.online ? (this.state.serverstatus.version) : ("unable to get version"))+" / Server software powered by: "+(this.state.serverstatus.online ? (this.state.serverstatus.software) : ("unable to get server Software"))}</p>
                     <p>Status API provided by mcsrvstat.us</p>
+                    <Discord source={"https://discord.com/widget?id=721194078167105546&theme=dark"}/>
                 </div>
-                <Discord source={"https://discord.com/widget?id=721194078167105546&theme=dark"}/>
             </div>
         )
     }
