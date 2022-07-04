@@ -94,6 +94,7 @@ li .link:hover{
     justify-content: flex-start;
     box-shadow: 2px 5px 5px rgba(0,0,0,1);
     overflow: hidden;
+    z-index: 5;
   }
 
   li {
@@ -103,7 +104,6 @@ li .link:hover{
   li .link::after {
     background-color: rgb(0, 0, 0);
   }
-
   
   .mainLogo{
     display: none;

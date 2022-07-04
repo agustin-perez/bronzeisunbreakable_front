@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import styled from 'styled-components';
-import './Discord.css';
 
 const Disc = styled.div`
     display: block;
@@ -28,7 +28,7 @@ const Disc = styled.div`
     }
     
     .info-discord icon{
-        position: absolute;
+        position: fixed;
         background-color: hsl(235,calc(var(--saturation-factor, 1)*85.6%),64.7%);
         color: white;
         border: none;
@@ -39,7 +39,7 @@ const Disc = styled.div`
     
     .iframe-discord{
         border-style: none;
-        position: absolute;
+        position: fixed;
         top: 55px;
         left: 0px;
         width: 100%;
@@ -48,10 +48,16 @@ const Disc = styled.div`
         height: calc(100% - 55px);
     }
 
-    @media screen and (min-width: 1000px){
+    @media screen{
         transform: ${({ status }) => status ? 'translateY(0px)' : 'translateY(calc(100% - 62px))'};
     }
-
+    @media screen and (max-width: 1000px){
+        width: 70%;
+    }
+`;
+/*  @media screen and (min-width: 1000px){
+        transform: ${({ status }) => status ? 'translateY(0px)' : 'translateY(calc(100% - 62px))'};
+    }
     @media screen and (max-width: 1000px){
         position: relative;
         top: 50px;
@@ -74,16 +80,23 @@ const Disc = styled.div`
             right: 10px;
         }
     }
-`;
+*/
 
-const Discord = ({ source }) => {
+const Discord = ( props ) => {
+    const location = useLocation();
+    const src = props.source;   
+
+    useEffect(() => {
+        setOpen(false);
+    }, [location]);
+
     let [open, setOpen] = useState(false)
     let icon="+";
 
     if(open){ icon = "-"; }
 
-    if (!source) { return <div>Cargando...</div>; }
-    const src = source;     
+    if (!src) { return <div>Cargando...</div>; }
+      
 
     return (
         <div>

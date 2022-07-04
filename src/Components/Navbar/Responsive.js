@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import "./Navbar.css";
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import LeftNav from "./LeftNav";
+import "./Navbar.css";
 
 const ResponsiveStyle = styled.div`
   width: 2rem;
@@ -22,9 +22,10 @@ const ResponsiveStyle = styled.div`
     width: 33px;
     height: 0.25rem;
     background-color: ${({ open }) => open ? 'black' : 'white'};
-    border-radius: 10px;
-    transform-origin: 1px;
+    border-radius: 15px;
+    transform-origin: 0.12vh;
     transition: all 0.3s linear;
+    cursor: pointer;
     &:nth-child(1) {
       transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
     }
@@ -39,7 +40,22 @@ const ResponsiveStyle = styled.div`
 `;
 
 const Responsive = ( props ) => {
-    let [open, setOpen] = useState(false)
+    let [open, setOpen] = useState(props.open);
+    let ref = useRef();
+
+    useEffect(() => {
+      const checkIfClickedOutside = (e) => {
+        if (open && ref.current && !ref.current.contains(e.target)) {
+          setOpen(false)
+        }
+      }
+
+      document.addEventListener("mousedown", checkIfClickedOutside)
+      return () => {
+        document.removeEventListener("mousedown", checkIfClickedOutside)
+      }
+    }, [open]) //DOESN'T WORK
+
     return (
         <div>
         <ResponsiveStyle className="responsiveHamburger" open={open} onClick={() => setOpen(!open)}>
@@ -47,7 +63,7 @@ const Responsive = ( props ) => {
             <div />
             <div />
         </ResponsiveStyle>
-        <LeftNav open={open} props/>
+        <LeftNav props={props} open={open}/>
         </div>
     );
 }

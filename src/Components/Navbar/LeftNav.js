@@ -9,12 +9,11 @@ const Ul = styled.ul`
   }
 `;
 
-const LeftNav = ({open}, props ) => {
-
+const LeftNav = ( {props, open} ) => {
   if(open){
     return (
       <Ul open={open}>
-        <li><Link className="link" to={'/'}>Inicio</Link></li>
+        <li><Link className="link" to={props.root}>Inicio</Link></li>
         <li><Link className="link" to={'/status'}>Estado del servidor</Link></li>	
         <li><Link className="link" to={'/changelog'}>Changelog</Link></li>	
       </Ul>

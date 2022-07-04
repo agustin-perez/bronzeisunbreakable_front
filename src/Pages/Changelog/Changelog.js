@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 class Changelog extends Component{
     state = {
-        titulo: "l0svirgosdelautu",
+        titulo: "Changelog",
     }
     
     render(){

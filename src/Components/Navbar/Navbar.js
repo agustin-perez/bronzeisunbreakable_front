@@ -18,7 +18,7 @@ const Navbar = ( props ) => {
     return (
           <div className="navBar">
             <Nav>
-              <Responsive props/>
+              <Responsive {...props}/>
             </Nav>
           </div>
     );
