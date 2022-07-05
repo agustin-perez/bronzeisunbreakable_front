@@ -1,12 +1,22 @@
-.homeWrapper {
+.HomeWrapper {
+    position: relative;
     color: white;
     align-items: center;
-    justify-content: center;
     text-align: center; 
-    display: block;   
-    margin: auto;
-    padding-top: 80px;
+    margin: 10px;
+    padding-top: 120px;
     background:rgb(95, 95, 95);
-    height: 100vh;
+    bottom: 60px;
+    white-space: pre-line;
+    font-size: 28px;
+}
+
+.HomeWrapper h1{
     font-size: 48px;
+    font-weight: bold;
+}
+
+.HomeWrapper h2{
+    font-size: 32px;
+    font-weight: bold;
 }
